@@ -15,14 +15,12 @@ package
 		public function Trou():void
 		{
 			var maTable:Table = new Table;
-			var X1:Number = maTable.tableLargeur
-			var coX:Array = [X1, 20, 30, 40, 50, 60];
-			var coY:Array = [40, 20, 30, 40, 50, 60];
+			var coX:Array = [-35, 438, 870, -35, 438, 870];
+			var coY:Array = [60, 60, 60, 509, 509, 509];
 			
-			var trou1:Shape = new Shape();		
-			var taille_trou1:int = 0.069 * Unite.METRE;
+			var trou1:Shape = new Shape();
 			
-			for (var i:int = 0; i < 1; i++)
+			for (var i:int = 0; i < 6; i++)
 			{
 				//trace("coY : ", coY[i]);
 				
