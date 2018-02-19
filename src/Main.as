@@ -26,11 +26,13 @@ package
 			
 			var maTable:Table = new Table;
 			var mesTrou:Trou = new Trou;
-			var maQueue:Queue = new Queue
+			var mesBilles:Bille = new Bille;
+			var maQueue:Queue = new Queue;
 			
 			
 			addChild(maTable);
 			addChild(mesTrou);
+			addChild(mesBilles);
 			addChild(maQueue);
 			
 			

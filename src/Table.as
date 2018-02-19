@@ -28,7 +28,6 @@ package
 			table.graphics.drawRoundRect(tableMillieuX, tableMillieuY, tableLargeur, tableHauteur, 10);
 			table.graphics.endFill();
 			addChild(table);
-			
 				
 	//Ombre Table
 			var ombreT:DropShadowFilter = new DropShadowFilter(); 
