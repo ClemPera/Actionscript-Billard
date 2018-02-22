@@ -4,8 +4,12 @@ package
 	import flash.events.Event;
 	import Table;
 	import Trou;
+	import flash.events.MouseEvent;
+	import lib.greensock.*; //lib
+	import lib.greensock.easing.*;
+
 	
-	[SWF(width = "970", height = "600", backgroundColor = "#ffffff")]
+	[SWF(width = "970", height = "600", backgroundColor = "#ffffff",frameRate="25")]
 	
 	/**
 	 * ...
@@ -23,19 +27,39 @@ package
 		{
 			removeEventListener(Event.ADDED_TO_STAGE, init);
 			// entry point
-			
+			var test:Sprite = new Sprite
+
 			var maTable:Table = new Table;
 			var mesTrou:Trou = new Trou;
 			var mesBilles:Bille = new Bille;
 			var maQueue:Queue = new Queue;
+			var collision:Col = new Col;
+			
+			maQueue.addEventListener(MouseEvent.MOUSE_DOWN, startDragging); 
+			maQueue.addEventListener(MouseEvent.MOUSE_UP, stopDragging);
+			
+			function startDragging(event:MouseEvent):void 
+			{ 
+				maQueue.startDrag(); 
+			} 
+			 
+			// This function is called when the mouse button is released. 
+			function stopDragging(event:MouseEvent):void 
+			{ 
+				maQueue.stopDrag(); 
+			} 
+
+			//function onDoubleClick(e:MouseEvent):void
+			//{
+				//trace("toto");
+			//}
 			
 			
 			addChild(maTable);
 			addChild(mesTrou);
 			addChild(mesBilles);
 			addChild(maQueue);
-			
-			
+			addChild(collision);
 			
 			
 			
